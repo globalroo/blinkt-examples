@@ -6,7 +6,7 @@ const spacing = 360.0 / 16;
 let hue = 0;
 
 let i = 0;
-setInterval(async () => {
+setInterval(() => {
 	hue = i % 360;
 	for (let x = 0; x < 8; x++) {
 		const offset = x * spacing;
@@ -21,3 +21,11 @@ setInterval(async () => {
 		i += 0.33;
 	}
 }, 0);
+
+console.log("CTRL C to stop.");
+
+process.on("SIGINT", function() {
+	blinkt.clearAll();
+	blinkt.sendUpdate();
+	process.exit();
+});
