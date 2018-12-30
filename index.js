@@ -1,5 +1,5 @@
 const { Blinkt } = require("blinkt-kit");
-const { hsv2rgb_a } = require("blinkt-utils");
+const { hsv2rgb } = require("blinkt-utils");
 
 const blinkt = new Blinkt();
 const spacing = 360.0 / 16;
@@ -11,7 +11,7 @@ setInterval(async () => {
 	for (let x = 0; x < 8; x++) {
 		const offset = x * spacing;
 		const h = (hue + offset) % 360;
-		const [r, g, b] = hsv2rgb_a(h, 1, 1);
+		const [r, g, b] = hsv2rgb(h, 1, 1);
 		blinkt.setPixel({ ix: x, r, g, b });
 	}
 	blinkt.sendUpdate();
