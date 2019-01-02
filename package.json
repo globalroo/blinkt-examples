@@ -1,15 +1,15 @@
 {
-  "name": "blinkt-examples",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Andy Davies",
-  "license": "MIT",
-  "dependencies": {
-    "blinkt-kit": "^1.0.0",
-    "blinkt-utils": "^1.0.2"
-  }
+	"name": "blinkt-examples",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "Andy Davies",
+	"license": "MIT",
+	"dependencies": {
+		"blinkt-kit": "^2.0.3",
+		"blinkt-utils": "^1.0.3"
+	}
 }
